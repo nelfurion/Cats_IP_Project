@@ -10,7 +10,7 @@ var CatsService = (function($) {
 			perPage = 5,
 			breed = '',
 			region = '',
-			ferocity = 1,
+			ferocity = 0,
 			cuteness = '') {
 		return new Promise(function(resolve, reject) {
 			$.get({
