@@ -1,5 +1,6 @@
 package bg.elsys.ip.rest;
 
+import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 
 import java.util.List;
@@ -16,6 +17,7 @@ import javax.ws.rs.core.Response;
 import javax.ws.rs.core.Response.Status;
 
 @Path("/cats")
+@Api("Cats")
 public class CatsResource {
 
 	@GET
@@ -52,7 +54,7 @@ public class CatsResource {
 	
 	@GET
 	@Path("/regions")
-	@ApiOperation(value="Get all distinct cat breeds.")
+	@ApiOperation(value="Get all distinct cat regions.")
 	@Produces(MediaType.APPLICATION_JSON)
 	public List<String> getDistinctRegions() {
 		return CatsService
@@ -62,7 +64,7 @@ public class CatsResource {
 	
 	@GET
 	@Path("/cutenessFactors")
-	@ApiOperation(value="Get all distinct cat breeds.")
+	@ApiOperation(value="Get all distinct cat cuteness.")
 	@Produces(MediaType.APPLICATION_JSON)
 	public List<String> getDistinctCutenessFactors() {
 		return CatsService
@@ -72,7 +74,7 @@ public class CatsResource {
 	
 	@GET
 	@Path("/ferocityLevels")
-	@ApiOperation(value="Get all distinct cat breeds.")
+	@ApiOperation(value="Get all distinct cat ferocities.")
 	@Produces(MediaType.APPLICATION_JSON)
 	public List<Integer> getDistinctFerocityLevels() {
 		return CatsService
